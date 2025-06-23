@@ -26,3 +26,27 @@ def remove_duplicates(nums):
     return list(my_set)
 
 print(remove_duplicates([5,5,5,5,6,6,7,8,9]))
+
+# Bonus, Palindrme Checker
+def is_palindrome(my_str):
+    my_len = len(my_str)
+    for i in range(0, my_len):
+        if(my_str[i] != my_str[my_len - (i+1)]):
+            return False
+    return True
+
+print(is_palindrome("tacocat"))
+print(is_palindrome("tacocato"))
+
+def vowel_counter(my_string):
+    vowels = ['a','e','i','o','u']
+    vowel_dict = {}
+    for letter in my_string:
+        if letter in vowels:
+            if letter in vowel_dict:
+                vowel_dict[letter] += 1
+            else:
+                vowel_dict[letter] = 1
+    return vowel_dict
+
+print(vowel_counter("my vowel counter"))
